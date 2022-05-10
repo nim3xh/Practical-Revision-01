@@ -1,0 +1,76 @@
+<html> 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index_style.css">
+        <script src="./jquery-3.6.0.min.js"></script>
+        <title>Practical Revision 01</title>
+    </head>
+    <body>
+        <h1>Find Your Body Mass Index Value</h1>
+        <div id="left">
+            <center>
+            <table>
+                <caption>BMI Chart</caption>
+                <tr>
+                    <th>BMI Value</th>
+                    <th>State</th>
+                </tr>
+                <tr>
+                    <td>19&lt;=bmi&lt;=24</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>24&lt;bmi&lt;=29</td>
+                    <td>Over weight</td>
+                </tr>
+                <tr>
+                    <td>29&lt;bmi&lt;60</td>
+                    <td>Obese</td>
+                </tr>
+            </table>
+        </center>
+        </div>
+        <div id="right">
+            <div class="form">
+            <form name="BMICal" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            Enter your weight in kilo grammes
+                        </td>
+                        <td>
+                            <input type="text" name="weight" id="weight" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter your height in meters
+                        </td>
+                        <td>
+                            <input type="text" name="height" id="height" required>
+                        </td>
+                    </tr>
+                </table
+                </div>
+                <br>
+                <div class="center">
+                    <input type="button" class="button" value="Submit" onclick="findBMI();">
+                    <input type="reset" class="button" value="Reset" id="reset">
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="output">
+            <h3 class="val">Your BMI value is</h3>
+            <h3 id="bmiValue"></h3>
+            <h3 id="state"></h3>
+        <br>
+        <div class="center">
+            <img src="./image/normal.jpg" alt="" id="normal">
+            <img src="./image/obese.jpeg" alt="" id="obese">
+            <img src="./image/over.jpeg" alt="" id="over">
+        </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
